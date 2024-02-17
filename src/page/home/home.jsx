@@ -11,7 +11,11 @@ import { ProudctCard } from "../../components/product-card";
 import { homeTestiminoalData } from "../../data/home-testiminoalData";
 import { HomeTestCard } from "./components/home-testCard";
 import { homeSayData } from "../../data/home-say-data";
-import { HomeSayCard } from "./components/home-sayCard/home-sayCard";
+import { HomeSayCard } from "./components/home-sayCard";
+import { homeEcoData } from "../../data/home-ecoData";
+import { HomeEcoText } from "./components/home-ecoText";
+import { homeOrganicData } from "../../data/home-organicData";
+import { HomeOrganicCard } from "./components/home-organicCard";
 export const Home = () => {
   return (
     <>
@@ -114,6 +118,54 @@ export const Home = () => {
               <HomeSayCard key={item.id} {...item} />
             ))}
           </div>
+        </div>
+      </section>
+      <section className="bg-primary py-[200px]">
+        <div className="container">
+          <p className="font-Yellowtail mb-[8px] text-4xl font-normal text-secondary">
+            Offer
+          </p>
+          <div className="mb-[60px]  flex items-center justify-between">
+            <h2 className=" text-5xl font-bold text-white">
+              We Offer Organic For You
+            </h2>
+            <Button
+              type="button"
+              variant="secondary"
+              beforeIcon={ArrowVectorLeftIcon}
+            >
+              View All Product
+            </Button>
+          </div>
+          <div className="flex justify-between">
+            {productData.slice(12, 16).map((item) => (
+              <ProudctCard {...item} key={item.id} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-[url(./assets/img/home-eco.png)] bg-left bg-no-repeat py-[100px]">
+        <div className="container ">
+          <div className="ml-auto mr-auto w-full max-w-[48%]  rounded-l-[30px] bg-white px-[89px] py-[77px]">
+            <p className="font-Yellowtail mb-[8px] text-4xl font-normal text-secondary">
+              Eco Friendly
+            </p>
+            <h2 className=" mb-[35px] text-5xl font-bold text-primary">
+              Econis is a Friendly Organic Store
+            </h2>
+            <div className="flex flex-col gap-[35px]">
+              {homeEcoData?.map((item) => (
+                <HomeEcoText key={item.id} {...item} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-peaceful-rain overflow-hidden py-[187px]">
+        <div className=" grid grid-cols-3 items-center gap-[42px]">
+          {homeOrganicData?.map((item) => (
+            <HomeOrganicCard key={item.id} {...item} />
+          ))}
         </div>
       </section>
     </>

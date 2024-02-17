@@ -14,6 +14,7 @@ export default {
         primary: "#274C5B",
         "endless-sea": "#335b6b",
         secondary: "#7EB693",
+        "peaceful-rain": "#f1f8f4",
         yellow: "#efd372",
         "city-rain": " #525c60",
         "dhūsar-grey": "#ababab",
@@ -34,6 +35,9 @@ export default {
       backgroundImage: {
         "home-about1": "url(./assets/img/home-about1.png)",
         "home-about2": "url(./assets/img/home-about2.png)",
+        "home-organic1": "url(./assets/img/home-organic1.png)",
+        "home-organic2": "url(./assets/img/home-organic2.png)",
+        "home-organic3": "url(./assets/img/home-organic3.png)",
       },
     },
   },
