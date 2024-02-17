@@ -14,8 +14,8 @@ function App() {
             element={item.component}
           />
         ))}
+        <Route path={"products/:id"} element={<ShopSingle />} />
       </Route>
-      <Route path={"products/:id"} element={<ShopSingle />} />
     </Routes>
   );
 }

@@ -23,12 +23,16 @@ export const Button = ({
           "border border-solid border-primary text-primary":
             variant === "default",
         },
+        {
+          "bg-heavy-sugar px-[75px] py-[23px] text-primary":
+            variant === "white",
+        },
         classname,
       )}
     >
       {children}
       {BeforeIcon && (
-        <span className="bg-endless-sea flex justify-center rounded-full p-[6px]">
+        <span className="flex justify-center rounded-full bg-endless-sea p-[6px]">
           <BeforeIcon />
         </span>
       )}

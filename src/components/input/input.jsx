@@ -5,15 +5,16 @@ export const Input = ({ placeholder, type, className, variant }) => {
   return (
     <input
       placeholder={placeholder}
+      aria-label={placeholder}
       type={type}
       className={clsx(
         "outline-none,border-none",
         {
-          "text-dhūsar-grey bg-white px-[23px] py-[31px] text-lg font-normal":
+          "outline-moon-landing rounded-2xl bg-white px-[23px] py-[31px] text-lg font-normal text-dhūsar-grey":
             variant === "primary",
         },
         {
-          "bg-dr-white rounded-[36px] py-[21px] pl-[23px] pr-[80px] text-lg font-normal text-secondary outline-secondary":
+          "rounded-[36px] bg-dr-white py-[21px] pl-[23px] pr-[80px] text-lg font-normal text-secondary outline-secondary":
             variant === "secondary",
         },
         className,

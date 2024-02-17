@@ -16,12 +16,15 @@ import { homeEcoData } from "../../data/home-ecoData";
 import { HomeEcoText } from "./components/home-ecoText";
 import { homeOrganicData } from "../../data/home-organicData";
 import { HomeOrganicCard } from "./components/home-organicCard";
+import { homeNewData } from "../../data/home-newData";
+import { HomenewCard } from "./components/home-newCard";
+import { Newslater } from "../../components/newsLater";
 export const Home = () => {
   return (
     <>
       <section className="bg-[url(./assets/img/home-heroBg.png)] bg-cover bg-center pb-[246px] pt-[258px]">
         <div className="container">
-          <p className="font-Yellowtail mb-[8px] text-4xl font-normal text-secondary">
+          <p className="mb-[8px] font-Yellowtail text-4xl font-normal text-secondary">
             100% Natural Food
           </p>
           <h1 className="mb-[23px] w-full max-w-[530px] text-[70px] font-black text-primary">
@@ -49,7 +52,7 @@ export const Home = () => {
             <img src={aboutUs} alt="img" />
           </div>
           <div>
-            <p className="font-Yellowtail mb-[8px] text-4xl font-normal text-secondary">
+            <p className="mb-[8px] font-Yellowtail text-4xl font-normal text-secondary">
               About Us
             </p>
             <h2 className="mb-[14px] w-full max-w-[90%] text-5xl font-black text-primary">
@@ -77,7 +80,7 @@ export const Home = () => {
       </section>
       <section className="pb-[200px] pt-[176px]">
         <div className="container">
-          <p className="font-Yellowtail mb-[8px] text-center text-4xl text-secondary">
+          <p className="mb-[8px] text-center font-Yellowtail text-4xl text-secondary">
             Categories
           </p>
           <h2 className="mb-[40px] text-center text-5xl font-bold text-primary">
@@ -101,7 +104,7 @@ export const Home = () => {
       </section>
       <section className="bg-[url(./assets/img/home-testeminialBg.png)] bg-cover py-[164px]">
         <div className="container ">
-          <p className="font-Yellowtail mb-[8px] text-center text-4xl text-secondary">
+          <p className="mb-[8px] text-center font-Yellowtail text-4xl text-secondary">
             Testimonial
           </p>
           <h2 className="mb-[51px] text-center text-5xl font-bold text-primary">
@@ -112,7 +115,7 @@ export const Home = () => {
               <HomeTestCard key={item.id} {...item} />
             ))}
           </div>
-          <span className="border-christmas-silver mb-[100px] block border-b border-solid"></span>
+          <span className="mb-[100px] block border-b border-solid border-christmas-silver"></span>
           <div className="flex items-center justify-evenly">
             {homeSayData?.map((item) => (
               <HomeSayCard key={item.id} {...item} />
@@ -122,7 +125,7 @@ export const Home = () => {
       </section>
       <section className="bg-primary py-[200px]">
         <div className="container">
-          <p className="font-Yellowtail mb-[8px] text-4xl font-normal text-secondary">
+          <p className="mb-[8px] font-Yellowtail text-4xl font-normal text-secondary">
             Offer
           </p>
           <div className="mb-[60px]  flex items-center justify-between">
@@ -147,7 +150,7 @@ export const Home = () => {
       <section className="bg-[url(./assets/img/home-eco.png)] bg-left bg-no-repeat py-[100px]">
         <div className="container ">
           <div className="ml-auto mr-auto w-full max-w-[48%]  rounded-l-[30px] bg-white px-[89px] py-[77px]">
-            <p className="font-Yellowtail mb-[8px] text-4xl font-normal text-secondary">
+            <p className="mb-[8px] font-Yellowtail text-4xl font-normal text-secondary">
               Eco Friendly
             </p>
             <h2 className=" mb-[35px] text-5xl font-bold text-primary">
@@ -161,13 +164,38 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      <section className="bg-peaceful-rain overflow-hidden py-[187px]">
+      <section className="overflow-hidden bg-peaceful-rain py-[187px]">
         <div className=" grid grid-cols-3 items-center gap-[42px]">
           {homeOrganicData?.map((item) => (
             <HomeOrganicCard key={item.id} {...item} />
           ))}
         </div>
       </section>
+      <section className="py-[180px]">
+        <div className="container">
+          <p className="mb-[8px] font-Yellowtail text-4xl font-normal text-secondary">
+            News
+          </p>
+          <div className="mb-[45px]  flex items-center justify-between">
+            <h2 className=" max-w-[45%] text-5xl font-bold text-primary">
+              Discover weekly content about organic food, & more
+            </h2>
+            <Button
+              type="button"
+              variant="default"
+              beforeIcon={ArrowVectorLeftIcon}
+            >
+              More News
+            </Button>
+          </div>
+          <div className="grid grid-cols-2 items-center">
+            {homeNewData?.map((item) => (
+              <HomenewCard key={item.id} {...item} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <Newslater />
     </>
   );
 };

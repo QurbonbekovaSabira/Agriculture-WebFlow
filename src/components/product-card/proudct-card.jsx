@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const ProudctCard = ({ id, text, oldPrice, saleprice, desc, img }) => {
   return (
     <Link
-      to={`/products/:${id}`}
+      to={`/products/${id}`}
       className="group relative max-w-[335px] grow overflow-hidden rounded-[30px] bg-doctor pt-[73px]"
     >
       <div className="mb-[8px] h-[324px] w-full overflow-hidden ">
@@ -20,10 +20,10 @@ export const ProudctCard = ({ id, text, oldPrice, saleprice, desc, img }) => {
       </div>
       <div className="px-[31px] pb-[17px]">
         <p className="mb-[13px] text-xl font-semibold text-primary">{text}</p>
-        <span className="bg-silver-lake mb-[6px] block h-[1px] w-full"></span>
+        <span className="mb-[6px] block h-[1px] w-full bg-silver-lake"></span>
         <div className=" flex items-center justify-between">
           <div className="flex items-end gap-[8px]">
-            <p className="text-fortress-grey text-base font-semibold">
+            <p className="text-base font-semibold text-fortress-grey">
               {oldPrice}
             </p>
             <p className="text-lg font-bold text-primary">{saleprice}</p>
